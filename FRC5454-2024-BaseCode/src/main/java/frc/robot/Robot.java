@@ -49,7 +49,7 @@ public class Robot extends LoggedRobot {
     // autonomous chooser on the dashboard.
     Logger logger = Logger.getInstance();
     // Record metadata
-    logger.recordMetadata("ProjectName", "2024-FRC5454");
+    logger.recordMetadata("ProjectName", "2023-Inquistor");
     
     // Set up data receivers & replay source
     switch (Constants.currentMode) {
