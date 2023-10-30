@@ -1,5 +1,4 @@
 package frc.robot.common.drivers;
-
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.TalonFXControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonFX;
@@ -181,12 +180,14 @@ public class Mk2SwerveModuleBuilder {
         final double sensorCoefficient = (2.0 * Math.PI) / (reduction * 2048.0);
 
         TalonFXConfiguration config = new TalonFXConfiguration();
+        
         config.slot0.kP = constants.p;
         config.slot0.kI = constants.i;
         config.slot0.kD = constants.d;
 
+    
         motor.setNeutralMode(NeutralMode.Brake);
-
+    
         motor.configAllSettings(config);
 
         targetAngleConsumer = targetAngle -> {
